@@ -1,0 +1,10 @@
+apps:
+  -
+    name: auth-service
+    restart_delay: 100
+    script: app.js
+    autorestart: true
+    env:
+      NODE_ENV: default
+    env_dev:
+      NODE_ENV: dev
