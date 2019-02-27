@@ -5,7 +5,7 @@ pipeline {
     agent any
 
     environment {
-        SERVICE_NAME = 'Reg-Webapp'
+        SERVICE_NAME = 'Auth-service'
         DIST_DIR = 'dist'
         ARTIFACT_NAME = "${env.SERVICE_NAME}-${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
     }
