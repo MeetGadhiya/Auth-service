@@ -23,7 +23,7 @@ pipeline {
                 sh 'node -v'
                 sh 'npm -v'
                 dir("${env.SRC_DIR}") {
-                    sh 'npm-cache install npm'
+                    sh 'npm install npm'
                 }
             }
 
