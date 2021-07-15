@@ -66,9 +66,9 @@ pipeline {
             }
 
             steps {
-                sh "ssh ubuntu@10.0.5.187 'bash -s' < ./pre-deploy.sh ${env.SERVICE_NAME}"
+                sh "ssh ubuntu@172.31.26.24 'bash -s' < ./pre-deploy.sh ${env.SERVICE_NAME}"
                 sh "scp ${env.WORKSPACE}/${env.ARTIFACT_NAME}.tar.gz ubuntu@10.0.5.187:/home/ubuntu/.tmp/builds/${env.SERVICE_NAME}"
-                sh "ssh ubuntu@10.0.5.187 'bash -s' < ./deploy.sh ${env.SERVICE_NAME} ${env.ARTIFACT_NAME} ${env.DEPLOY_ENV}"
+                sh "ssh ubuntu@172.31.26.24 'bash -s' < ./deploy.sh ${env.SERVICE_NAME} ${env.ARTIFACT_NAME} ${env.DEPLOY_ENV}"
             }
 
         }
